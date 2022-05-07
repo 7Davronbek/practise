@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import apis from './components/api';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Switch>
+      <Route path='/' exact component={App} />
+      <Route path='/api' exact component={apis} />
+    </Switch>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
