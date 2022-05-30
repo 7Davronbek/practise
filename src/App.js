@@ -3,32 +3,53 @@ import axios from 'axios'
 
 const App = () => {
   const [all, setAll] = useState([])
-  const [selectedFile, setSelectedFile] = useState(null)
-  const [name, setName] = useState('')
+
+  const [name, setName] = useState(null)
+  const [file, setFile] = useState(null)
+  
+    const config = {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'multipart/form-data'
+        },
+    }
 
   useEffect(() => {
+    getAllUser()
+  }, [])
+
+  const getAllUser = () => {
     axios.get('https://dostavka-api.herokuapp.com/user/testing')
       .then((res) => {
-        console.log(res.data);
+        setAll(res.data)
       })
       .catch((err) => {
         console.log(err);
       })
-  }, [])
-
-  const fileSelectedHandler = (e) => {
-    console.log(e.target.files[0]);
-    setSelectedFile(e.target.files[0])
-    // setAll(selectedFile.name)
-  }
+    }
 
   const fileUploadHandler = () => {
-    const fd = new FormData()
-    fd.append('image', selectedFile, selectedFile.name)
-    console.log(fd);
-    axios.post('https://dostavka-api.herokuapp.com/user/testing', { fd, name })
+    const formData = new FormData()
+    formData.append('title', name)
+    formData.append('image', file)
+    axios.post('https://dostavka-api.herokuapp.com/user/testing', formData, config )
       .then((res) => {
-        console.log(res);
+        getAllUser()
+        setName('')
+        setFile('')
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
+  const handleDelete = (id) => {
+    axios.delete(`https://dostavka-api.herokuapp.com/user/testing/${id}`)
+      .then((res) => {
+        getAllUser()
+      })
+      .catch((err) => {
+        console.log(err);
       })
   }
 
@@ -40,16 +61,16 @@ const App = () => {
           <div className="row">
             <div className="col-4">
 
-              <input
+              {/* <input
                 name='image'
                 type="file"
                 onChange={fileSelectedHandler}
-              />
+              /> */}
+               <input type="file" name='image' accept=".png, .svg, .jpg, .jpeg" onChange={e => setFile(e.target.files[0])}/>
 
               <input
                 name='title'
                 type="text"
-                value={name}
                 onChange={e => setName(e.target.value)}
               />
 
@@ -61,9 +82,14 @@ const App = () => {
           <div className="row">
             {all?.map((item, index) => (
 
-              <div key={index} className="col-lg-4">
+              <div key={index} className="col-lg-4 h-100 d-flex align-items-center justify-content-center flex-column mb-5">
                 <img src={item.image} alt="" className="w-100" />
                 <h5>{item.title}</h5>
+
+                <div className="d-flex align-items-center">
+                  <button className="btn btn-outline-dark mx-2">Edit</button>
+                  <button onClick={(id) => handleDelete(item.id)} className="btn btn-outline-warning">Delete</button>
+                </div>
               </div>
 
             ))}
