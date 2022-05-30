@@ -43,6 +43,10 @@ const App = () => {
       })
   }
 
+  const handleEdit = (id) => {
+    console.log(id);
+  }
+
   const handleDelete = (id) => {
     axios.delete(`https://dostavka-api.herokuapp.com/user/testing/${id}`)
       .then((res) => {
@@ -87,7 +91,7 @@ const App = () => {
                 <h5>{item.title}</h5>
 
                 <div className="d-flex align-items-center">
-                  <button className="btn btn-outline-dark mx-2">Edit</button>
+                  <button onClick={(id) => handleEdit(item.id)} className="btn btn-outline-dark mx-2">Edit</button>
                   <button onClick={(id) => handleDelete(item.id)} className="btn btn-outline-warning">Delete</button>
                 </div>
               </div>
