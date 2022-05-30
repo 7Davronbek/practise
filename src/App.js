@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
+
 
 const App = () => {
   const [all, setAll] = useState([])
@@ -84,6 +86,7 @@ const App = () => {
           </div>
 
           <div className="row">
+
             {all?.map((item, index) => (
 
               <div key={index} className="col-lg-4 h-100 d-flex align-items-center justify-content-center flex-column mb-5">
@@ -101,6 +104,16 @@ const App = () => {
         </div>
 
       </div>
+              
+              <MouseParallaxContainer>
+              <MouseParallaxChild factorX={0.03} factorY={0.05} >
+                  <img src="example1.jpg" alt="" />
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ipsum doloribus deleniti eos eveniet debitis aspernatur hic corporis, iure illo amet mollitia non id, voluptate nam quibusdam minima, quo illum.
+              </MouseParallaxChild>
+              <MouseParallaxChild factorX={0.07} factorY={0.08}>
+                  <img src="example2.jpg" alt="" />
+              </MouseParallaxChild> 
+            </MouseParallaxContainer>
 
     </>
   )
