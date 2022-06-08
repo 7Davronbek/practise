@@ -8,15 +8,18 @@ const Three = () => {
             {/* <Spline scene="https://prod.spline.design/VciXIYe6kFM1-jZn/scene.splinecode" /> */}
             {/* <Spline scene="https://prod.spline.design/VciXIYe6kFM1-jZn/scene.splinecode" /> */}
 
-            <Spline scene="https://prod.spline.design/VciXIYe6kFM1-jZn/scene.splinecode" />
+            {/* <Spline scene="https://prod.spline.design/VciXIYe6kFM1-jZn/scene.splinecode" /> */}
             {/* <iframe style={{width: 600, height: 600}} src='https://my.spline.design/untitled-d261c69b510b6fd6e4ab180dadcb69a2/'/> */}
             {/* <img src="/images/1.jpg" className='w-100' alt="" /> */}
+            {/* <Spline style={{width: "600px", height: "600px"}} scene="https://prod.spline.design/jzzOeTQ7YM8hdrdV/scene.splinecode" /> */}
+            {/* <Spline scene="https://prod.spline.design/jzzOeTQ7YM8hdrdV/scene.splinecode" /> */}
 
+            <Spline style={{ width: "100%", height: "100%" }} scene="https://prod.spline.design/r2LtnOufmOw2MBIM/scene.splinecode" />
 
             <div className="vh-100"></div>
 
             <div className="three">
-                
+
             </div>
 
         </>
