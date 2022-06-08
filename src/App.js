@@ -130,19 +130,19 @@ export default App
 //  */
 
 // function FileUpload() {
-//   // State to store uploaded file
+  // State to store uploaded file
 //       const [file, setFile] = useState("");
 //       const [name, setName] = useState("");
 //       console.log(file);
       
       
 
-//   // Handles file upload event and updates state
+  // Handles file upload event and updates state
 //   function handleUpload(event) {
 //     setFile(event.target.files[0]);
     
-//     // Add code here to upload file to server
-//     // ...
+    // Add code here to upload file to server
+    // ...
 //   }
 
 //   const clicks = () => {

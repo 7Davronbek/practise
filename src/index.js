@@ -6,12 +6,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Three from './components/Three';
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path='/' exact component={App} />
+      <Route path='/three' exact component={Three} />
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')
