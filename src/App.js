@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
+import Slider from './components/Slider';
 
 
 const App = () => {
@@ -114,6 +115,8 @@ const App = () => {
                   <img src="example2.jpg" alt="" />
               </MouseParallaxChild> 
             </MouseParallaxContainer>
+
+            <Slider />
 
     </>
   )

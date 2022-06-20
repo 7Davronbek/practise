@@ -7,6 +7,14 @@ import { Switch } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Three from './components/Three';
+import '@splidejs/react-splide/css';
+
+// or other themes
+import '@splidejs/react-splide/css/skyblue';
+import '@splidejs/react-splide/css/sea-green';
+
+// or only core styles
+import '@splidejs/react-splide/css/core';
 
 
 ReactDOM.render(
