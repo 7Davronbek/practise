@@ -14,8 +14,9 @@ const Three = () => {
             {/* <Spline style={{width: "600px", height: "600px"}} scene="https://prod.spline.design/jzzOeTQ7YM8hdrdV/scene.splinecode" /> */}
             {/* <Spline scene="https://prod.spline.design/jzzOeTQ7YM8hdrdV/scene.splinecode" /> */}
 
-            <Spline style={{ width: "100%", height: "100%" }} scene="https://prod.spline.design/r2LtnOufmOw2MBIM/scene.splinecode" />
-
+            {/* <Spline style={{ width: "100%", height: "100%" }} scene="https://prod.spline.design/r2LtnOufmOw2MBIM/scene.splinecode" /> */}
+            {/* <Spline style={{ width: "1000px ", height: "1000px   " }} scene="https://prod.spline.design/r2LtnOufmOw2MBIM/scene.splinecode" /> */}
+            <Spline  style={{ width: "1000px ", height: "1000px   " }} scene="https://prod.spline.design/r2LtnOufmOw2MBIM/scene.splinecode" />
             <div className="vh-100"></div>
 
             <div className="three">
