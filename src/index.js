@@ -7,14 +7,10 @@ import { Switch } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Three from './components/Three';
+
 import '@splidejs/react-splide/css';
+import Slider from './components/Slider';
 
-// or other themes
-import '@splidejs/react-splide/css/skyblue';
-import '@splidejs/react-splide/css/sea-green';
-
-// or only core styles
-import '@splidejs/react-splide/css/core';
 
 
 ReactDOM.render(
@@ -22,6 +18,7 @@ ReactDOM.render(
     <Switch>
       <Route path='/' exact component={App} />
       <Route path='/three' exact component={Three} />
+      <Route path='/slider' exact component={Slider} />
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')

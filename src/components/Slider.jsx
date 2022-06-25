@@ -1,5 +1,6 @@
 import React from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import PureCarousel from './PureCarousel';
 
 const Slider = () => {
     return (
@@ -27,6 +28,8 @@ const Slider = () => {
                     </div>
                 </div>
             </div>
+
+            <PureCarousel />
         </div>
     )
 }
