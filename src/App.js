@@ -1,11 +1,13 @@
 import React from 'react'
-import Language from './components/Language'
+// import Language from './components/Language'
+import SwiperSlider from './components/SwiperSlider'
 import './style/main.css'
 
 const App = () => {
   return (
     <>
-    <Language />
+    <SwiperSlider />
+    {/* <Language /> */}
     </>
   )
 }
