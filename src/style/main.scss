@@ -1,2 +1,8 @@
-body {
+.Language {
+    background-color: rgb(194, 194, 194);
+    z-index: 9;
+
+    &.active {
+        display: none !important;
+    }
 }
