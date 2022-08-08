@@ -1,11 +1,11 @@
 import React, { Suspense, useTransition } from 'react'
-import i18next from 'i18next'
+import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
 const trasnsitionsEn = { welcome: 'Welcome!!!' }
 const trasnsitionsRu = { welcome: 'Privet!!!' }
 
-i18next
+i18n
     .use(initReactI18next)
     .init({
         resources: {
@@ -22,11 +22,11 @@ const TranslateI18 = () => {
     console.log(t);
 
     const onChangeLang = e => {
-        i18next.changeLanguage(e.target.value)
+        i18n.changeLanguage(e.target.value)
     }
 
     return (
-        <Suspense>
+        <Suspense fallback='loading...'>
             <div className='TranslateI18'>
                 <div className="container">
                     <div className="row">
