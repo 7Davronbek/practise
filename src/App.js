@@ -1,19 +1,20 @@
 import React, { useState } from 'react'
-import Language from './componets/Language'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './componets/Navbar'
-import TranslateI18 from './componets/TranslateI18'
+import Geocode from './pages/Geocode'
 // import SwiperSlider from './componets/SwiperSlider'
 
 const App = () => {
-  const [lang, setLang] = useState(false)
-  const [modal, setModal] = useState(true)
+  // const [lang, setLang] = useState(false)
+  // const [modal, setModal] = useState(true)
   return (
     <div className='App'>
-      <Language lang={lang} setLang={setLang} setModal={setModal} modal={modal} />
-      {lang ? <>ru</> : <>uz</>}
-      <Navbar />
-      <TranslateI18 />
-      {/* <SwiperSlider /> */}
+      <HashRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Geocode />} />
+        </Routes>
+      </HashRouter>
     </div>
   )
 }
