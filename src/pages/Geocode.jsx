@@ -1,36 +1,58 @@
 import React from 'react'
 import { useState } from 'react'
-import { useEffect } from 'react'
-import GoogleMapReact from 'google-map-react';
-import { API_KEY } from '../tools/constants'
+// import { useEffect } from 'react'
+// import GoogleMapReact from 'google-map-react';
+// import { API_KEY } from '../tools/constants'
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
 const Geocode = () => {
 
-    const [latitute, setLatitute] = useState('')
-    const [longitute, setLongitute] = useState('')
+    const [center, setCenter] = useState({
+        lat: 41.3127,
+        lng: 69.2785,
+    });
+    const containerStyle = {
+        width: '100%',
+        height: '100%',
+    };
 
-    useEffect(() => {
-        navigator.geolocation.getCurrentPosition((position) => {
-            console.log(position.coords);
-            setLatitute(position.coords.latitude)
-            setLongitute(position.coords.longitude)
-        })
-    }, [])
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: 'AIzaSyAkkKvMyf8Tk3Q8s7MWXin6njbtjIjq2S4',
+    });
+
+    const onMapClick = (e) => {
+        setCenter({
+            lat: e?.latLng?.lat(),
+            lng: e?.latLng?.lng(),
+        });
+    };
+    console.log(center);
+
 
     return (
         <div className='Geocode'>
             <div className="container">
                 <div className="row">
-                    <div className="col-12">
-                        <div style={{ height: '100vh', width: '100%' }}>
-
-                          
+                    {/* <GoogleMapReact /> */}
+                    {isLoaded ? (
+                        <div className="col-12 vh-100">
+                            <GoogleMap
+                                mapContainerStyle={containerStyle}
+                                center={center}
+                                zoom={17}
+                                onClick={onMapClick}
+                            >
+                                <></>
+                            </GoogleMap>
                         </div>
-                        <GoogleMapReact />
-                    </div>  
+                    ) : (
+                        <></>
+                    )}
+
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

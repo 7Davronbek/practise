@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { HashRouter, Route, Routes } from 'react-router-dom'
+import Cambridge from './componets/Cambridge'
 import Navbar from './componets/Navbar'
 import Geocode from './pages/Geocode'
 // import SwiperSlider from './componets/SwiperSlider'
