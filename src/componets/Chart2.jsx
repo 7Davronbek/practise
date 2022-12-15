@@ -37,7 +37,7 @@ const Chart2 = () => {
         ],
         datasets: [
             {
-                label: '369',
+                label: 'QWQWE',
                 data: ['500', '500', '500'],
                 backgroundColor: '#3E975B',
                 border: 0,
