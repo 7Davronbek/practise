@@ -9,6 +9,10 @@ import FetchData from "./componets/FetchData";
 import Navbar from "./componets/Navbar";
 import Pagination from "./componets/Pagination";
 import PostPage, { loader as blogPostLoader } from "./pages/PostPage";
+import SinglePostPage, {
+  loader as singlePostLoader,
+} from "./pages/SinglePostPage";
+import ErrorHandler from "./componets/ErrorHandler";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -26,8 +30,18 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <FetchData /> },
       { path: "/pagination", element: <Pagination /> },
-      { path: "/post", element: <PostPage />, loader: blogPostLoader },
-      { path: "/post/:id", element: <PostPage /> },
+      {
+        path: "/post",
+        element: <PostPage />,
+        loader: blogPostLoader,
+        errorElement: <ErrorHandler />,
+      },
+      {
+        path: "/post/:id",
+        element: <SinglePostPage />,
+        loader: singlePostLoader,
+        errorElement: <ErrorHandler />,
+      },
     ],
   },
 ]);
