@@ -13,6 +13,7 @@ import SinglePostPage, {
   loader as singlePostLoader,
 } from "./pages/SinglePostPage";
 import ErrorHandler from "./componets/ErrorHandler";
+import YupFormikDemo from "./pages/YupFormikDemo";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         element: <SinglePostPage />,
         loader: singlePostLoader,
         errorElement: <ErrorHandler />,
+      },
+      {
+        path: "/formik",
+        element: <YupFormikDemo />,
       },
     ],
   },
