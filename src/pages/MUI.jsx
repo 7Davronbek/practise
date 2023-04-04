@@ -16,6 +16,7 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import SaveIcon from "@mui/icons-material/Save";
 import Tabs from "../componets/MUI/Tabs";
 import CheckboxSlider from "../componets/MUI/CheckboxSlider";
+import Mask from "../componets/MUI/Mask";
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -153,8 +154,15 @@ const MUI = () => {
           </div>
         </div>
       </div>
-      <Tabs />
-      <CheckboxSlider />
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <Tabs />
+            <CheckboxSlider />
+            <Mask />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
