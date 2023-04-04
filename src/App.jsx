@@ -14,6 +14,7 @@ import SinglePostPage, {
 } from "./pages/SinglePostPage";
 import ErrorHandler from "./componets/ErrorHandler";
 import YupFormikDemo from "./pages/YupFormikDemo";
+import HookFormPage from "./pages/HookFormPage";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/formik",
         element: <YupFormikDemo />,
+      },
+      {
+        path: "/hookform",
+        element: <HookFormPage />,
       },
     ],
   },

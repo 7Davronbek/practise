@@ -1,7 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
 import * as yup from "yup";
-// import { TextField } from "@mui/material";
 
 const YupFormikDemo = () => {
   const initialValues = {
@@ -32,11 +31,11 @@ const YupFormikDemo = () => {
     console.log(values);
   };
   return (
-    <div className="YupFormikDemo py-5">
+    <div className="YupFormikDemo">
       <div className="container">
         <div className="row">
-          <div className="col-8 mx-auto">
-            <h1 className="mb-5">Formik</h1>
+          <div className="col-6 shadow p-4 rounded mx-auto">
+            <h1 className="mb-3">Formik</h1>
 
             <Formik
               onSubmit={handleformSubmit}
@@ -52,19 +51,6 @@ const YupFormikDemo = () => {
                 handleSubmit,
               }) => (
                 <form onSubmit={handleSubmit}>
-                  {/* <TextField
-                    fullWidth
-                    variant="filled"
-                    type="text"
-                    label="First Name"
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                    value={values.firstName}
-                    name="firstName"
-                    error={!!touched.firstName && !!errors.firstName}
-                    helperText={touched.firstName && errors.firstName}
-                    sx={{ gridColumn: "span 2" }}
-                  /> */}
 
                   <label htmlFor="First">First Name:</label>
                   <div className="inputWrap mb-3">
@@ -77,13 +63,12 @@ const YupFormikDemo = () => {
                       onBlur={handleBlur}
                       value={values.firstName}
                       required={touched.firstName && errors.firstName}
-                      onError={!!touched.firstName && !!errors.firstName}
+                      // onError={!!touched.firstName && !!errors.firstName}
                     />
                     {touched.firstName && errors.firstName ? (
                       <div className="text-danger">{errors.firstName}</div>
                     ) : null}
                   </div>
-                  
 
                   <label htmlFor="last">Last Name:</label>
                   <div className="inputWrap mb-3">
@@ -96,7 +81,7 @@ const YupFormikDemo = () => {
                       onBlur={handleBlur}
                       value={values.lastName}
                       required={touched.lastName && errors.lastName}
-                      onError={!!touched.lastName && !!errors.lastName}
+                      // onError={!!touched.lastName && !!errors.lastName}
                     />
                     {touched.lastName && errors.lastName ? (
                       <div className="text-danger">{errors.lastName}</div>
@@ -114,15 +99,13 @@ const YupFormikDemo = () => {
                       onBlur={handleBlur}
                       value={values.email}
                       required={touched.email && errors.email}
-                      onError={!!touched.email && !!errors.email}
+                      // onError={!!touched.email && !!errors.email}
                     />
                     {touched.email && errors.email ? (
                       <div className="text-danger">{errors.email}</div>
                     ) : null}
                   </div>
                   
-                  
-
                   <label htmlFor="First">First Name:</label>
                   <div className="inputWrap mb-3">
                     <input
@@ -134,7 +117,7 @@ const YupFormikDemo = () => {
                       onBlur={handleBlur}
                       value={values.firstName}
                       required={touched.firstName && errors.firstName}
-                      onError={!!touched.firstName && !!errors.firstName}
+                      // onError={!!touched.firstName && !!errors.firstName}
                     />
                     {touched.firstName && errors.firstName ? (
                       <div className="text-danger">{errors.firstName}</div>

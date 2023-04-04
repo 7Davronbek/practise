@@ -12,6 +12,7 @@ const Navbar = () => {
               <Link to="/pagination">Pagination</Link>
               <Link to="/post">Post</Link>
               <Link to="/formik">Formik</Link>
+              <Link to="/hookform">Hook form</Link>
             </div>
           </div>
         </div>
