@@ -14,6 +14,7 @@ const HookFormPage = () => {
       <div className="container">
         <div className="row">
           <div className="col-6 mx-auto">
+            <h3>Hook Form</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 className="form-control mb-3"

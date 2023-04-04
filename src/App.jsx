@@ -15,6 +15,7 @@ import SinglePostPage, {
 import ErrorHandler from "./componets/ErrorHandler";
 import YupFormikDemo from "./pages/YupFormikDemo";
 import HookFormPage from "./pages/HookFormPage";
+import MUI from "./pages/MUI";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/hookform",
         element: <HookFormPage />,
+      },
+      {
+        path: "/mui",
+        element: <MUI />,
       },
     ],
   },

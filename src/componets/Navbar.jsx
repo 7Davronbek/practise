@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import Footer from "./Footer";
 
 const Navbar = () => {
   return (
@@ -13,11 +14,13 @@ const Navbar = () => {
               <Link to="/post">Post</Link>
               <Link to="/formik">Formik</Link>
               <Link to="/hookform">Hook form</Link>
+              <Link to="/mui">MUI</Link>
             </div>
           </div>
         </div>
       </div>
       <Outlet />
+      <Footer />
     </>
   );
 };
