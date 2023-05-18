@@ -16,6 +16,7 @@ import ErrorHandler from "./componets/ErrorHandler";
 import YupFormikDemo from "./pages/YupFormikDemo";
 import HookFormPage from "./pages/HookFormPage";
 import MUI from "./pages/MUI";
+import EditorPage from "./pages/EditorPage";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/mui",
         element: <MUI />,
+      },
+      {
+        path: "/editor",
+        element: <EditorPage />,
       },
     ],
   },

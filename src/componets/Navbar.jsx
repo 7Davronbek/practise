@@ -15,6 +15,7 @@ const Navbar = () => {
               <Link to="/formik">Formik</Link>
               <Link to="/hookform">Hook form</Link>
               <Link to="/mui">MUI</Link>
+              <Link to="/editor">Editor</Link>
             </div>
           </div>
         </div>
