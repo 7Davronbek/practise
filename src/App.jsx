@@ -17,6 +17,7 @@ import YupFormikDemo from "./pages/YupFormikDemo";
 import HookFormPage from "./pages/HookFormPage";
 import MUI from "./pages/MUI";
 import EditorPage from "./pages/EditorPage";
+import Cursor from "./componets/cursor/Cursor";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/editor",
         element: <EditorPage />,
+      },
+      {
+        path: "/cursor",
+        element: <Cursor />,
       },
     ],
   },
