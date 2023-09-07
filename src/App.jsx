@@ -18,6 +18,8 @@ import HookFormPage from "./pages/HookFormPage";
 import MUI from "./pages/MUI";
 import EditorPage from "./pages/EditorPage";
 import Cursor from "./componets/cursor/Cursor";
+import SplineDemo from "./componets/spline/SplineDemo";
+import Offtop from "./componets/Offtop";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -66,6 +68,14 @@ const router = createBrowserRouter([
       {
         path: "/cursor",
         element: <Cursor />,
+      },
+      {
+        path: "/spline",
+        element: <SplineDemo />,
+      },
+      {
+        path: "/offtop",
+        element: <Offtop />,
       },
     ],
   },

@@ -16,6 +16,8 @@ const Navbar = () => {
               <Link to="/hookform">Hook form</Link>
               <Link to="/mui">MUI</Link>
               <Link to="/editor">Editor</Link>
+              <Link to="/spline">Spline</Link>
+              <Link to="/offtop">Offtop</Link>
             </div>
           </div>
         </div>
