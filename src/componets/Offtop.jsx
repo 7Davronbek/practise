@@ -6,11 +6,25 @@ const Offtop = () => {
   const [range, setRange] = useState(0);
 
   const create = async () => {
-    const {data} = await axios.get("http://localhost:8080/user");
+    const { data } = await axios.post(
+      "http://localhost:8090/hall",
+      {
+        country: "Uzbekistan",
+        region: "Chilonzori",
+        city: "Tashkeni",
+        buildingName: "Test halli",
+        capacity: 200,
+      },
+      { headers: { ownerId: "dd1aa54b-418d-4041-a254-0bdaa01f8a8e" } }
+    );
   };
+  const getHalls = async () => {
+  const { data } = await axios.get("localhost:8090/hall")
+  }
   useEffect(() => {
-    create()
-  }, [])
+    getHalls();
+    // create();
+  }, []);
   return (
     <div className="Offtop">
       <div className="container">
