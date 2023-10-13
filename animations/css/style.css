@@ -1,0 +1,32 @@
+.d-flex {
+  display: flex;
+  align-items: center;
+  width: 80% !important;
+  margin: 0 auto !important;
+}
+
+h1,
+h2 {
+  will-change: transform !important;
+}
+
+.me-5 {
+  margin-right: 50px;
+}
+
+.mt-5 {
+  margin-top: 300px;
+}
+
+.mt-10 {
+  margin-top: 1000px;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.vh-100 {
+  height: 100vh;
+}/*# sourceMappingURL=style.css.map */

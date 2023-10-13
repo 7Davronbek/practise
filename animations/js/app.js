@@ -1,0 +1,41 @@
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+if (ScrollTrigger.isTouch !== 1) {
+  ScrollSmoother.create({
+    wrapper: ".wrapper",
+    content: ".content",
+    smooth: 1.5,
+    effects: true,
+  });
+
+  gsap.fromTo(
+    ".hero_section",
+    { opacity: 1 },
+    {
+      opacity: 0,
+      scrollTrigger: {
+        end: "500",
+        scrub: true,
+        start: "center",
+        trigger: ".hero_section",
+      },
+    }
+  );
+
+  let itemsL = gsap.utils.toArray(".left");
+
+  itemsL.forEach((item) => {
+    gsap.fromTo(
+      item,
+      { opacity: 0.3, x: -100 },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: item,
+          scrub: true,
+        },
+      }
+    );
+  });
+}
