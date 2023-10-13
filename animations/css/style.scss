@@ -30,3 +30,18 @@ body {
 .vh-100 {
   height: 100vh;
 }
+
+.myDiv, .mySecondDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.mySecondDiv {
+    margin-top: 20px !important;
+}
+
+.left, .right {
+    transition: all .1s ease;
+}

@@ -27,7 +27,7 @@ if (ScrollTrigger.isTouch !== 1) {
   itemsL.forEach((item) => {
     gsap.fromTo(
       item,
-      { opacity: 0.3, x: -100 },
+      { opacity: 0.3, x: -100,},
       {
         opacity: 1,
         x: 0,
@@ -38,4 +38,45 @@ if (ScrollTrigger.isTouch !== 1) {
       }
     );
   });
+
+  let itemsR = gsap.utils.toArray(".right");
+
+  itemsR.forEach((item) => {
+    gsap.fromTo(
+      item,
+      { opacity: 0.3, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: item,
+          scrub: true,
+        },
+      }
+    );
+  });
+
+  gsap.fromTo(
+    ".myDiv",
+    { x: -100 },
+    {
+      x: 50,
+      scrollTrigger: {
+        trigger: ".myDiv",
+        scrub: true,
+      },
+    }
+  );
+  
+  gsap.fromTo(
+    ".mySecondDiv",
+    { x: 100 },
+    {
+      x: -100,
+      scrollTrigger: {
+        trigger: ".mySecondDiv",
+        scrub: true,
+      },
+    }
+  );
 }
