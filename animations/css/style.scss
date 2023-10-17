@@ -45,3 +45,9 @@ body {
 .left, .right {
     transition: all .1s ease;
 }
+
+.wrap {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}

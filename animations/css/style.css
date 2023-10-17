@@ -44,4 +44,10 @@ body {
 
 .left, .right {
   transition: all 0.1s ease;
+}
+
+.wrap {
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

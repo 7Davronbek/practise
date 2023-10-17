@@ -19,11 +19,10 @@ const Offtop = () => {
     );
   };
   const getHalls = async () => {
-  const { data } = await axios.get("localhost:8090/hall")
-  }
+    const { data } = await axios.get("localhost:8090/hall");
+  };
   useEffect(() => {
     getHalls();
-    // create();
   }, []);
   return (
     <div className="Offtop">

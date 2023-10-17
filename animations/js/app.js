@@ -80,3 +80,19 @@ if (ScrollTrigger.isTouch !== 1) {
     }
   );
 }
+
+
+
+gsap.fromTo(
+  ".wrap",
+  { background: 'transparent' },
+  {
+    background: 'blue',
+    color: 'white',
+    scrollTrigger: {
+      end: "800",
+      scrub: true,
+      trigger: ".wrap",
+    },
+  }
+);
