@@ -20,6 +20,7 @@ import EditorPage from "./pages/EditorPage";
 import Cursor from "./componets/cursor/Cursor";
 import SplineDemo from "./componets/spline/SplineDemo";
 import Offtop from "./componets/Offtop";
+import DoughnutChartPage from "./componets/doughnut-chart/DoughnutChartPage";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
     element: <Navbar />,
     children: [
       { path: "/", element: <FetchData /> },
-      { path: "/pagination", element: <Pagination /> },
+     // { path: "/pagination", element: <Pagination /> },
       {
         path: "/post",
         element: <PostPage />,
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "/formik",
         element: <YupFormikDemo />,
+      },
+      {
+        path: "/chart",
+        element: <DoughnutChartPage />,
       },
       {
         path: "/hookform",
@@ -75,7 +80,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/offtop",
-        element: <Offtop />,
+        element: <DoughnutChartPage />,
       },
     ],
   },
