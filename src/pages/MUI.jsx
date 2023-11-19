@@ -17,6 +17,7 @@ import SaveIcon from "@mui/icons-material/Save";
 import Tabs from "../componets/MUI/Tabs";
 import CheckboxSlider from "../componets/MUI/CheckboxSlider";
 import Mask from "../componets/MUI/Mask";
+import TablePageMUI from "../componets/MUI/TablePageMUI";
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -160,6 +161,7 @@ const MUI = () => {
             <Tabs />
             <CheckboxSlider />
             <Mask />
+            <TablePageMUI />
           </div>
         </div>
       </div>
