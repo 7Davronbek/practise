@@ -21,6 +21,7 @@ import Cursor from "./componets/cursor/Cursor";
 import SplineDemo from "./componets/spline/SplineDemo";
 import Offtop from "./componets/Offtop";
 import DoughnutChartPage from "./componets/doughnut-chart/DoughnutChartPage";
+import PaginationPage from "./componets/pagination/PaginationPage";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
       {
         path: "/mui",
         element: <MUI />,
+      },
+      {
+        path: "/pagination-page",
+        element: <PaginationPage />,
       },
       {
         path: "/editor",
