@@ -6,3 +6,19 @@
         display: none !important;
     }
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .pagination a {
+    margin: 0 5px;
+    cursor: pointer;
+    color: #000;
+  }
+  
+  .pagination .active a {
+    font-weight: bold;
+  }

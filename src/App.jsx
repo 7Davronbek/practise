@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import FetchData from "./componets/FetchData";
 import Navbar from "./componets/Navbar";
-import Pagination from "./componets/Pagination";
 import PostPage, { loader as blogPostLoader } from "./pages/PostPage";
 import SinglePostPage, {
   loader as singlePostLoader,
@@ -19,9 +18,11 @@ import MUI from "./pages/MUI";
 import EditorPage from "./pages/EditorPage";
 import Cursor from "./componets/cursor/Cursor";
 import SplineDemo from "./componets/spline/SplineDemo";
-import Offtop from "./componets/Offtop";
 import DoughnutChartPage from "./componets/doughnut-chart/DoughnutChartPage";
 import PaginationPage from "./componets/pagination/PaginationPage";
+import MyPagination from "./react-paginate/ReactPaginatePage";
+import ReactPaginatePage from "./react-paginate/ReactPaginatePage";
+import ReactHooksPaginator from "./ReactHooksPaginator";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -54,6 +55,14 @@ const router = createBrowserRouter([
       {
         path: "/formik",
         element: <YupFormikDemo />,
+      },
+      {
+        path: "/react-hook-paginator",
+        element: <ReactHooksPaginator />,
+      },
+      {
+        path: "/react-paginate-page",
+        element: <ReactPaginatePage currentItems={2} />,
       },
       {
         path: "/chart",
