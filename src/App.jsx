@@ -23,6 +23,8 @@ import PaginationPage from "./componets/pagination/PaginationPage";
 import MyPagination from "./react-paginate/ReactPaginatePage";
 import ReactPaginatePage from "./react-paginate/ReactPaginatePage";
 import ReactHooksPaginator from "./ReactHooksPaginator";
+import SearchPage from "./pages/search/SearchPage";
+import CorsPage from "./pages/cors/CorsPage";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -73,8 +75,16 @@ const router = createBrowserRouter([
         element: <HookFormPage />,
       },
       {
+        path: "/cors-page",
+        element: <CorsPage />,
+      },
+      {
         path: "/mui",
         element: <MUI />,
+      },
+      {
+        path: "/search",
+        element: <SearchPage />,
       },
       {
         path: "/pagination-page",
