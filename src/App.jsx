@@ -25,6 +25,8 @@ import ReactPaginatePage from "./react-paginate/ReactPaginatePage";
 import ReactHooksPaginator from "./ReactHooksPaginator";
 import SearchPage from "./pages/search/SearchPage";
 import CorsPage from "./pages/cors/CorsPage";
+import CartImpl from "./componets/CartImpl.jsx";
+import PdfDownloader from "./componets/pdf-downloader/PdfDownloader.jsx";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -59,6 +61,10 @@ const router = createBrowserRouter([
         element: <YupFormikDemo />,
       },
       {
+        path: "/pdf-download",
+        element: <PdfDownloader />,
+      },
+      {
         path: "/react-hook-paginator",
         element: <ReactHooksPaginator />,
       },
@@ -73,6 +79,10 @@ const router = createBrowserRouter([
       {
         path: "/hookform",
         element: <HookFormPage />,
+      },
+      {
+        path: "/cart-impl",
+        element: <CartImpl />,
       },
       {
         path: "/cors-page",
