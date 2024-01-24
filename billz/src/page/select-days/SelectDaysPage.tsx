@@ -1,3 +1,4 @@
+// @ts-ignore
 import {DateRange} from 'react-date-range';
 import {useState} from "react";
 import React from "react";

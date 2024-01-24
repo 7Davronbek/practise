@@ -27,7 +27,13 @@
     "i18next": "^23.7.18",
     "react-i18next": "^14.0.1",
     "date-fns": "^3.3.1",
-    "react-date-range": "^2.0.0-alpha.4"
+    "react-date-range": "^2.0.0-alpha.4",
+    "@editorjs/checklist": "^1.6.0",
+    "@editorjs/editorjs": "^2.29.0",
+    "@editorjs/header": "^2.8.1",
+    "@editorjs/image": "^2.9.0",
+    "@editorjs/paragraph": "^2.11.3",
+    "react-editor-js": "^2.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

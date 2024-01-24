@@ -10,6 +10,7 @@ import MultipleSelectPage from "./page/multiple-select/MultipleSelectPage.tsx";
 import LoginPage from "./page/login/LoginPage.tsx";
 import I18NextPage from "./page/i18next/I18nextPage.tsx";
 import SelectDaysPage from "./page/select-days/SelectDaysPage.tsx";
+import EditorJsPage from "./page/editor-js/EditorJsPage.tsx";
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path="/login" element={<LoginPage/>}/>
                 <Route path="/i18next" element={<I18NextPage/>}/>
                 <Route path="/select-days" element={<SelectDaysPage/>}/>
+                <Route path="/editor-js" element={<EditorJsPage/>}/>
                 <Route path="/multiple-select" element={<MultipleSelectPage/>}/>
             </Routes>
             <ToastContainer/>
