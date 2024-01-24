@@ -7,6 +7,8 @@ import "./locales/index.js"
 
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css"
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 import "@/style/main.scss"
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

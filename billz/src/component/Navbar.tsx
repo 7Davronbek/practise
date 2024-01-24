@@ -12,6 +12,7 @@ const Navbar = () => {
                         <h2 className="logo">LOGO</h2>
                         <Link className="mx-2" to="/multiple-select">Selects</Link>
                         <Link className="mx-2" to="/i18next">I18next</Link>
+                        <Link className="mx-2" to="/select-days">Select days</Link>
                         <div className="d-flex ms-auto">
                             <button onClick={() => setIsLight(!isLight)}
                                     className="btn btn-outline-dark">{isLight ? "Light" : "Dark"}</button>
