@@ -3,6 +3,7 @@ import App from './App.tsx'
 import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {store} from "./store/store.ts";
+import "./locales/index.js"
 
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css"

@@ -23,7 +23,9 @@
     "react-router-dom": "^6.21.2",
     "react-toastify": "^10.0.3",
     "sass": "^1.69.7",
-    "use-local-storage": "^3.0.0"
+    "use-local-storage": "^3.0.0",
+    "i18next": "^23.7.18",
+    "react-i18next": "^14.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
