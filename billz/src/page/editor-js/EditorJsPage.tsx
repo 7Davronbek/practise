@@ -2,7 +2,6 @@ import {createReactEditorJS} from 'react-editor-js'
 import {EDITOR_JS_TOOLS} from '../editor-js/tools.js'
 
 const EditorJsPage = () => {
-
     const ReactEditorJS = createReactEditorJS()
 
     return (
