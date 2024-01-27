@@ -14,6 +14,7 @@ const Navbar = () => {
                         <Link className="mx-2" to="/i18next">I18next</Link>
                         <Link className="mx-2" to="/select-days">Select days</Link>
                         <Link className="mx-2" to="/editor-js">EditorJsPage</Link>
+                        <Link className="mx-2" to="/local-storage">LocalStoragePage</Link>
                         <div className="d-flex ms-auto">
                             <button onClick={() => setIsLight(!isLight)}
                                     className="btn btn-outline-dark me-3">{isLight ? "Light" : "Dark"}</button>
