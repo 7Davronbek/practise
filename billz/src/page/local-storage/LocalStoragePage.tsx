@@ -4,6 +4,8 @@ import {useState} from "react";
 const LocalStoragePage = () => {
     const {setItem, getItem, removeItem} = useLocalStorage("input-value")
 
+    useLocalStorage("input-value").setItem({"id": 1})
+
     const [value, setValue] = useState<string>("")
     const [localstorage, setLocalstorage] = useState<string>(getItem())
 
@@ -29,4 +31,5 @@ const LocalStoragePage = () => {
     );
 };
 
+// npm i react-hook-form zustand @hookform/resolvers zod
 export default LocalStoragePage;
