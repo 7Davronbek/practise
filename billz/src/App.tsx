@@ -12,6 +12,7 @@ import I18NextPage from "./page/i18next/I18nextPage.tsx";
 import SelectDaysPage from "./page/select-days/SelectDaysPage.tsx";
 import EditorJsPage from "./page/editor-js/EditorJsPage.tsx";
 import LocalStoragePage from "./page/local-storage/LocalStoragePage.tsx";
+import ZustandPage from "./page/zustandpage/ZustandPage.tsx";
 
 const App = () => {
     return (
@@ -25,6 +26,7 @@ const App = () => {
                 <Route path="/editor-js" element={<EditorJsPage/>}/>
                 <Route path="/multiple-select" element={<MultipleSelectPage/>}/>
                 <Route path="/local-storage" element={<LocalStoragePage/>}/>
+                <Route path="/zustand-counter" element={<ZustandPage/>}/>
             </Routes>
             <ToastContainer/>
             <ScrollToTop/>
