@@ -1,7 +1,7 @@
 import axios from "axios";
 import {requestHandler} from "../../hooks/requestHandler.ts";
 
-interface User {
+export interface User {
     id: number,
     name: string
 }
