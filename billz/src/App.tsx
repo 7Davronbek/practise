@@ -2,17 +2,18 @@ import {Route, Routes} from "react-router-dom";
 import {ToastContainer} from "react-toastify";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-import {Main} from "@/page";
+import {Main} from "@/pages";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-import {ScrollToTop, Navbar} from "@/component"
-import MultipleSelectPage from "./page/multiple-select/MultipleSelectPage.tsx";
-import LoginPage from "./page/login/LoginPage.tsx";
-import I18NextPage from "./page/i18next/I18nextPage.tsx";
-import SelectDaysPage from "./page/select-days/SelectDaysPage.tsx";
-import EditorJsPage from "./page/editor-js/EditorJsPage.tsx";
-import LocalStoragePage from "./page/local-storage/LocalStoragePage.tsx";
-import ZustandPage from "./page/zustandpage/ZustandPage.tsx";
+import {ScrollToTop, Navbar} from "@/components"
+import MultipleSelectPage from "./pages/multiple-select/MultipleSelectPage.tsx";
+import LoginPage from "./pages/login/LoginPage.tsx";
+import I18NextPage from "./pages/i18next/I18nextPage.tsx";
+import SelectDaysPage from "./pages/select-days/SelectDaysPage.tsx";
+import EditorJsPage from "./pages/editor-js/EditorJsPage.tsx";
+import LocalStoragePage from "./pages/local-storage/LocalStoragePage.tsx";
+import ZustandPage from "./pages/zustandpage/ZustandPage.tsx";
+import UserRequestHandlerPage from "./pages/request-handler/UserRequestHandlerPage.tsx";
 
 const App = () => {
     return (
@@ -27,6 +28,7 @@ const App = () => {
                 <Route path="/multiple-select" element={<MultipleSelectPage/>}/>
                 <Route path="/local-storage" element={<LocalStoragePage/>}/>
                 <Route path="/zustand-counter" element={<ZustandPage/>}/>
+                <Route path="/request-handler" element={<UserRequestHandlerPage />}/>
             </Routes>
             <ToastContainer/>
             <ScrollToTop/>

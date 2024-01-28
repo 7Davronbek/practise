@@ -1,5 +1,5 @@
 // @ts-ignore
-import {TOKEN} from "@/constant";
+import {TOKEN} from "@/constants";
 import {createSlice} from "@reduxjs/toolkit";
 
 interface IAuthState {

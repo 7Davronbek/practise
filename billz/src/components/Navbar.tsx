@@ -16,6 +16,7 @@ const Navbar = () => {
                         <Link className="mx-2" to="/editor-js">EditorJsPage</Link>
                         <Link className="mx-2" to="/local-storage">LocalStoragePage</Link>
                         <Link className="mx-2" to="/zustand-counter">ZustandPage</Link>
+                        <Link className="mx-2" to="/request-handler">GenericRequestPage</Link>
                         <div className="d-flex ms-auto">
                             <button onClick={() => setIsLight(!isLight)}
                                     className="btn btn-outline-dark me-3">{isLight ? "Light" : "Dark"}</button>

@@ -1,6 +1,6 @@
 import axios from "axios";
 // @ts-ignore
-import {TOKEN} from "@/constant"
+import {TOKEN} from "@/constants"
 
 export default axios.create({
     baseURL: "http://localhost:8080",
