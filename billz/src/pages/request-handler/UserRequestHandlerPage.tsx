@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {getUsers, User} from "./userService.ts";
 import UserZustandPage from "./zustand/UserZustandPage.tsx";
+import UserReduxPage from "./store/UserReduxPage.tsx";
 
 export default function UserRequestHandlerPage() {
     const [userResponse, setUserResponse] = useState<User[]>([]);
@@ -21,6 +22,7 @@ export default function UserRequestHandlerPage() {
     }, []);
     return (
         <>
+            <UserReduxPage />
             <div className="UserRequestHandlerPage">
                 <div className="container">
                     <div className="row">
