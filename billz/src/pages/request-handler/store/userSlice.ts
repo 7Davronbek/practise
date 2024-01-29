@@ -53,14 +53,6 @@ export const userSlice = createSlice({
     }
 })
 
-// const getUsersJson = createAsyncThunk("user/getUsers", async () => {
-//     try {
-//       await getUsers({})
-//     } catch (err) {
-//         console.log(err)
-//     }
-// });
-
 export const userAction = {
     ...userSlice.actions,
     getUsersJson
