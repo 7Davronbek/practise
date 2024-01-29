@@ -11,8 +11,6 @@ const CommentPage = () => {
         getComments()
     }, [getComments]);
 
-    console.log(isLoading)
-
     return (
         <div className="CommentPage">
             <div className="container">

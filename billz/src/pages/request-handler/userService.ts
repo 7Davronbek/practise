@@ -12,5 +12,5 @@ interface GetUserParams {
 }
 
 export const getUsers = requestHandler<GetUserParams, User[]>((params) =>
-    axios.get("https://jsonplaceholder.typicode.com/users", {params})
+    axios.get("https://jsonplaceholder.typicode.com/users123123", {params})
 )
