@@ -14,6 +14,7 @@ import EditorJsPage from "./pages/editor-js/EditorJsPage.tsx";
 import LocalStoragePage from "./pages/local-storage/LocalStoragePage.tsx";
 import ZustandPage from "./pages/zustandpage/ZustandPage.tsx";
 import UserRequestHandlerPage from "./pages/request-handler/UserRequestHandlerPage.tsx";
+import SearchParamsPage from "./pages/search-params/SearchParamsPage.tsx";
 
 const App = () => {
     return (
@@ -29,6 +30,7 @@ const App = () => {
                 <Route path="/local-storage" element={<LocalStoragePage/>}/>
                 <Route path="/zustand-counter" element={<ZustandPage/>}/>
                 <Route path="/request-handler" element={<UserRequestHandlerPage />}/>
+                <Route path="/search-params" element={<SearchParamsPage />}/>
             </Routes>
             <ToastContainer/>
             <ScrollToTop/>
