@@ -1,4 +1,5 @@
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import axios from "@/config";
 import {IUserType} from "../interface";
 

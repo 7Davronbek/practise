@@ -1,5 +1,6 @@
 import axios from "axios";
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import {TOKEN} from "@/constants"
 
 export default axios.create({
