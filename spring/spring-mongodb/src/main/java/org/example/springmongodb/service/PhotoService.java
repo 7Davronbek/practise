@@ -1,5 +1,4 @@
 package org.example.springmongodb.service;
-
 import org.example.springmongodb.collection.Photo;
 import org.springframework.web.multipart.MultipartFile;
 

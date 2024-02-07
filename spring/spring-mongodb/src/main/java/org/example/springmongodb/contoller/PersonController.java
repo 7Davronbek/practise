@@ -1,5 +1,4 @@
 package org.example.springmongodb.contoller;
-
 import lombok.RequiredArgsConstructor;
 import org.bson.Document;
 import org.example.springmongodb.collection.Person;

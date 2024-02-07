@@ -1,5 +1,4 @@
 package org.example.springmongodb.collection;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import org.bson.types.Binary;

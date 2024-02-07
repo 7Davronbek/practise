@@ -1,5 +1,4 @@
 package org.example.springmongodb.contoller;
-
 import lombok.RequiredArgsConstructor;
 import org.example.springmongodb.collection.Photo;
 import org.example.springmongodb.service.PhotoService;
@@ -10,7 +9,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 
 @RestController

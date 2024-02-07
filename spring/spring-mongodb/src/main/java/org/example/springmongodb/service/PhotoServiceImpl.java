@@ -1,5 +1,4 @@
 package org.example.springmongodb.service;
-
 import lombok.RequiredArgsConstructor;
 import org.bson.BsonBinarySubType;
 import org.bson.types.Binary;

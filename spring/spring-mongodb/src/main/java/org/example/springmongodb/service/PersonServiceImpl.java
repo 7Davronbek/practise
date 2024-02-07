@@ -1,5 +1,4 @@
 package org.example.springmongodb.service;
-
 import lombok.RequiredArgsConstructor;
 import org.bson.Document;
 import org.example.springmongodb.collection.Person;
@@ -14,7 +13,6 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.support.PageableExecutionUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.ArrayList;
 import java.util.List;
 
