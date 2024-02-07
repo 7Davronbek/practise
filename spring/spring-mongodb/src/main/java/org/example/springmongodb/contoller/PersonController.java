@@ -40,7 +40,7 @@ public class PersonController {
         return personService.getByPersonAge(minAge, maxAge);
     }
 
-    @GetMapping("/serch")
+    @GetMapping("/search")
     public Page<Person> searchPerson(
             @RequestParam(required = false) String name,
             @RequestParam(required = false) Integer minAge,
@@ -56,5 +56,10 @@ public class PersonController {
     @GetMapping("/oldestPerson")
     public List<Document> getOldestPerson() {
         return personService.getOldestPersonByCity();
+    }
+
+    @GetMapping("/popilationByCity")
+    public List<Document> getPopulationByCity() {
+        return personService.getPopulationByCity();
     }
 }

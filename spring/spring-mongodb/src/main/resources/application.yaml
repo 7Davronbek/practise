@@ -6,3 +6,8 @@ spring:
       database: admin
       port: 27017
       host: localhost
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 15MB
+      enabled: true
