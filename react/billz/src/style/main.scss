@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+body {
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-bottom: 0;
+  }
+
+  img {
+    user-select: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+    outline: none !important;
+
+    &:hover {
+      text-decoration: none !important;
+      color: #666;
+    }
+  }
+
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  .myBtn {
+    transition: all 0.4s ease-in-out;
+    border: none !important;
+    color: #fff;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    padding: 12px 16px;
+    border-radius: var(--8, 8px);
+    background: #ff6e2e;
+
+    &:hover {
+      transform: scale(0.95);
+      background: #ff6e2e;
+      color: #fff;
+    }
+
+    &:active {
+      transform: scale(0.9);
+      background: #ff6e2e !important;
+      color: #fff !important;
+    }
+  }
+
+  .Navbar {
+    .logo {
+      font-family: 'Merienda', cursive;
+    }
+  }
+}

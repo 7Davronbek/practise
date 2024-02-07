@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Send Message from Bot</title>
+  </head>
+  <body>
+    <button onclick="sendMessage()">Send Message</button>
+
+    <script>
+      function sendMessage() {
+        
+        var name = "John Doe";
+        var email = "johndoe@example.com";
+
+        var message = "Name: " + name + "\nEmail: " + email;
+
+        var url = "https://api.telegram.org/bot" + botToken + "/sendMessage";
+        var data = {
+          chat_id: chatId,
+          text: message,
+        };
+
+        fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => {
+            console.log("Message sent successfully");
+          })
+          .catch((error) => {
+            console.error("Error sending message:", error);
+          });
+      }
+    </script>
+  </body>
+</html>

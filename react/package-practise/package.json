@@ -1,0 +1,51 @@
+{
+  "name": "practise",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@editorjs/editorjs": "^2.27.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/lab": "^5.0.0-alpha.124",
+    "@mui/material": "^5.11.15",
+    "@progress/kendo-react-pdf": "^6.1.1",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.437",
+    "autosuggest-highlight": "^3.3.4",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.2.3",
+    "chart.js": "^4.4.0",
+    "formik": "^2.2.9",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "react": "^18.2.0",
+    "react-animated-cursor": "^2.7.0",
+    "react-apexcharts": "^1.4.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^2.1.0",
+    "react-hook-form": "^7.43.9",
+    "react-hooks-paginator": "^0.5.1",
+    "react-imask": "^6.5.0-alpha.0",
+    "react-js-pagination": "^3.0.3",
+    "react-number-format": "^5.1.4",
+    "react-paginate": "^8.2.0",
+    "react-router-dom": "^6.9.0",
+    "react-swipeable-views": "^0.14.0",
+    "styled-components": "^6.1.1",
+    "yup": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.1.0"
+  }
+}
