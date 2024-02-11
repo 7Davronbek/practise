@@ -1,0 +1,75 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.2'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'org.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+//	liquibase
+//	implementation 'org.liquibase:liquibase-core'
+
+//	open feign
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    runtimeOnly 'org.postgresql:postgresql'
+//	lombok
+    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+//	security
+//    testImplementation 'org.springframework.security:spring-security-test'
+//    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+//	docker compose
+    testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+
+//	validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+//  redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'redis.clients:jedis:5.1.0'
+
+//	jwt token
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+
+    implementation 'org.apache.commons:commons-lang3:3.14.0'
+
+// 	rsql
+    implementation 'cz.jirutka.rsql:rsql-parser:2.1.0'
+
+//	model mapper
+    implementation 'org.modelmapper:modelmapper:3.2.0'
+
+//	swagger
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
