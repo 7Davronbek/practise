@@ -1,16 +1,15 @@
-package org.example.project.journal.entity;
+package org.example.project.subcategory.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
-import org.example.project.article.entity.Article;
-import org.example.project.key_word.entity.KeyWords;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -18,36 +17,27 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class Journal {
+public class SubCategory {
     @Id
     private UUID id;
 
     @Column(unique = true)
-    private String name;
+    private String phoneNumber;
 
-    private String description;
+    private String fax;
+
+    private String email;
+
+    private String issn;
+
+    private String website;
+
+    private String name;
 
     @ElementCollection
     @CollectionTable(name = "journal_images", joinColumns = @JoinColumn(name = "journal_id"))
     @Column(name = "image_name")
     private List<String> images;
-
-    @EqualsAndHashCode.Exclude
-    @ToString.Exclude
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "journal_keyword",
-            joinColumns = @JoinColumn(name = "journal_id"),
-            inverseJoinColumns = @JoinColumn(name = "keyword_id")
-    )
-    private Set<KeyWords> keywords;
-
-    @ManyToMany(mappedBy = "journals")
-    @EqualsAndHashCode.Exclude
-    @ToString.Exclude
-    private Set<Article> articles;
-
-    private String file;
 
     @CreatedDate
     private LocalDateTime created;

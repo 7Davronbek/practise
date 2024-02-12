@@ -1,31 +1,41 @@
-package org.example.project.key_word.entity;
+package org.example.project.seminar.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.*;
-import org.example.project.journal.entity.Journal;
+import org.example.project.user.entity.User;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
-import java.util.Set;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class KeyWords {
+public class Seminar {
     @Id
+    private UUID id;
+
+    @Column(unique = true)
+    private String phoneNumber;
+
+    private String link;
+
+    @Column(unique = true)
+    private String fullName;
+
     private String name;
 
-    @ManyToMany(mappedBy = "keywords")
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
-    private Set<Journal> journals;
+    @JsonIgnore
+    private User user;
 
     @CreatedDate
     private LocalDateTime created;
