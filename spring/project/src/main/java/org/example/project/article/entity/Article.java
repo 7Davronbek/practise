@@ -1,15 +1,14 @@
-package org.example.project.journal.entity;
+package org.example.project.article.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.example.project.article.entity.Article;
-import org.example.project.key_word.entity.KeyWords;
+import org.example.project.author.entity.Author;
+import org.example.project.journal.entity.Journal;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -18,34 +17,35 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class Journal {
+public class Article {
     @Id
     private UUID id;
 
     @Column(unique = true)
     private String name;
 
-    private String description;
-
-    @ElementCollection
-    @CollectionTable(name = "journal_images", joinColumns = @JoinColumn(name = "journal_id"))
-    @Column(name = "image_name")
-    private List<String> imageNames;
+    @Enumerated(EnumType.STRING)
+    private Language language;
 
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
-            name = "journal_keyword",
-            joinColumns = @JoinColumn(name = "journal_id"),
-            inverseJoinColumns = @JoinColumn(name = "keyword_id")
+            name = "article_author",
+            joinColumns = @JoinColumn(name = "article_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id")
     )
-    private Set<KeyWords> keywords;
+    private Set<Author> authors;
 
-    @ManyToMany(mappedBy = "journals")
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
-    private Set<Article> articles;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "article_journal",
+            joinColumns = @JoinColumn(name = "article_id"),
+            inverseJoinColumns = @JoinColumn(name = "journal_id")
+    )
+    private Set<Journal> journals;
 
     private String file;
 
