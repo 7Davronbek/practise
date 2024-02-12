@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+journal:
+  otp:
+    retry-wait-time: 5 # in seconds
+    retry-count: 3
+    time-to-live: 60 # in seconds
+
+  notification:
+    sms:
+      eskiz: # TODO eskiz token here
+
+  security:
+    token:
+      expiration: 86400
+      secret: ZFwrxIeSMF3oKmMtUq8wCgfDVRnte68J5cRG7aE7eG6nLe2miQyM4We7J7yzME7w

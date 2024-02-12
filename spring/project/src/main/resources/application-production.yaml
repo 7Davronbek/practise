@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+one-fit:
+  otp:
+    retry-wait-time: 60 # in seconds
+    retry-count: 3
+    time-to-live: 3600 # in seconds
+
+  notification:
+    sms:
+      eskiz: # TODO eskiz token here
+
+  security:
+    token:
+      expiration: 86400
+      secret:  ZFwrxIeSMF3oKmMtUq8wCgfDVRnte68J5cRG7aE7eG6nLe2miQyM4We7J7yzME7w
+

@@ -1,1 +1,6 @@
-
+spring:
+  profiles:
+    active: local
+  docker:
+    compose:
+      lifecycle-management: start_only

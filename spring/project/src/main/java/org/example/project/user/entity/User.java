@@ -20,10 +20,12 @@ import java.util.UUID;
 public class User {
     @Id
     private UUID id;
+    @Column(unique = true)
     private String phoneNumber;
     private String password;
     private String image;
     private String name;
+    @Column(unique = true)
     private String email;
     @Enumerated(EnumType.STRING)
     private Role role;
