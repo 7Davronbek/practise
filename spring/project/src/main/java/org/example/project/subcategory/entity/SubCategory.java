@@ -1,9 +1,9 @@
 package org.example.project.subcategory.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.example.project.user.entity.User;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -38,6 +38,13 @@ public class SubCategory {
     @CollectionTable(name = "journal_images", joinColumns = @JoinColumn(name = "journal_id"))
     @Column(name = "image_name")
     private List<String> images;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    @JsonIgnore
+    private User user;
 
     @CreatedDate
     private LocalDateTime created;
