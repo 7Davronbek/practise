@@ -87,8 +87,8 @@ public class User implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Stream<Permission> rolePermissionStream = roles.stream()
-                .map(Role::getPermissions)
-                .flatMap(Collection::stream);
+                .map(r -> (Role r) -> r.getPermissions())
+                .flatMap(r -> r.getPermissions().stream());
 
         Stream<Permission> permissionStream = Stream.concat(rolePermissionStream, permissions.stream());
 
