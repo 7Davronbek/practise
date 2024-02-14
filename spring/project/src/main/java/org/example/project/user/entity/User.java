@@ -67,34 +67,22 @@ public class User implements UserDetails {
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_role",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
-    private Set<UserRole> roles;
+    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
 
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_permission",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "permission_id")
-    )
+    @JoinTable(name = "user_permission", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "permission_id"))
     private Set<Permission> permissions;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        Stream<Permission> rolePermissionStream = roles.stream()
-                .map(r -> (Role r) -> r.getPermissions())
-                .flatMap(r -> r.getPermissions().stream());
+        Stream<Permission> rolePermissionStream = roles.stream().map(Role::getPermissions).flatMap(Collection::stream);
 
         Stream<Permission> permissionStream = Stream.concat(rolePermissionStream, permissions.stream());
 
-        Set<SimpleGrantedAuthority> collect = permissionStream
-                .map(permission -> new SimpleGrantedAuthority(permission.getName()))
-                .collect(Collectors.toSet());
+        Set<SimpleGrantedAuthority> collect = permissionStream.map(permission -> new SimpleGrantedAuthority(permission.getName())).collect(Collectors.toSet());
 
         return collect;
     }
