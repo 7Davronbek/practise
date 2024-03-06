@@ -15,6 +15,9 @@ import LocalStoragePage from "./pages/local-storage/LocalStoragePage.tsx";
 import ZustandPage from "./pages/zustandpage/ZustandPage.tsx";
 import UserRequestHandlerPage from "./pages/request-handler/UserRequestHandlerPage.tsx";
 import SearchParamsPage from "./pages/search-params/SearchParamsPage.tsx";
+import InfinityScrollPage from "./pages/scroll/InfinityScrollPage.tsx";
+import TodoPage from "./effector/TodoPage.tsx";
+import EffectorForm from "./effector/effectorForm/EffectorForm.tsx";
 
 const App = () => {
     return (
@@ -31,6 +34,9 @@ const App = () => {
                 <Route path="/zustand-counter" element={<ZustandPage/>}/>
                 <Route path="/request-handler" element={<UserRequestHandlerPage />}/>
                 <Route path="/search-params" element={<SearchParamsPage />}/>
+                <Route path="/infinity" element={<InfinityScrollPage />}/>
+                <Route path="/effector" element={<TodoPage />}/>
+                <Route path="/effector-form" element={<EffectorForm />}/>
             </Routes>
             <ToastContainer/>
             <ScrollToTop/>
